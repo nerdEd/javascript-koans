@@ -8,12 +8,12 @@ describe("About Objects", function () {
     });
 
     it("should confirm objects are collections of properties", function () {
-      expect(meglomaniac.mastermind).toBe(__);
+      expect(meglomaniac.mastermind).toBe('Joker');
     }); 
 
     it("should confirm that properties are case sensitive", function () {
-      expect(meglomaniac.henchwoman).toBe(__);
-      expect(meglomaniac.henchWoman).toBe(__);
+      expect(meglomaniac.henchwoman).toBe('Harley');
+      expect(meglomaniac.henchWoman).toBe(undefined);
     });
   });
   
@@ -29,7 +29,7 @@ describe("About Objects", function () {
     };
    
     battleCry = meglomaniac.battleCry(4);
-    expect(__).toMatch(battleCry);
+    expect('They are Pinky and the Brain Brain Brain Brain Brain').toMatch(battleCry);
   });
 
   it("should confirm that when a function is attached to an object, 'this' refers to the object", function () {
@@ -44,8 +44,8 @@ describe("About Objects", function () {
       }
     };
    
-    expect(currentYear).toBe(__);
-    expect(meglomaniac.calculateAge()).toBe(__);
+    expect(currentYear).toBe(2011);
+    expect(meglomaniac.calculateAge()).toBe(41);
   });
 
   describe("'in' keyword", function () {
@@ -62,7 +62,7 @@ describe("About Objects", function () {
 
       hasBomb = "theBomb" in meglomaniac;
      
-      expect(hasBomb).toBe(__);
+      expect(hasBomb).toBe(true);
     });
 
     it("should not have the detonator however", function () {
